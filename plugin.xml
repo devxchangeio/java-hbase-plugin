@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="HBasePlugin"
+            extensions="java"
+            icon="icons/sample.gif"
+            contributorClass="hbaseplugin.editors.HBasePluginPageEditorContributor"
+            class="hbaseplugin.editors.HBasePluginPageEditor"
+            id="hbaseplugin.editors.HBasePluginPageEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="HBase Plugin"
+            id="HBasePlugin">
+      </category>
+      <wizard
+            name="HBase Java API"
+            icon="icons/hbase.png"
+            category="HBasePlugin"
+            class="hbaseplugin.wizards.HBasePluginWizard"
+            id="hbaseplugin.wizards.HBasePluginWizard">
+      </wizard>
+   </extension>
+
+</plugin>
